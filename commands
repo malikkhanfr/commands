@@ -1,0 +1,76 @@
+#netstat###
+netstat -plnt | grep ':80
+##################
+
+docker run --name aws-eb-mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0.11
+docker exec -it aws-eb-mysql bash
+mysql -uroot -proot
+
+from dockerfile:
+
+docker build -t zrtech/myapp . && docker run -p 8080:8080 zrtech/myapp
+
+
+http://localhost:8080/instructors/in28minutes/courses/
+
+
+ sudo /etc/init.d/mysql start
+GRANT ALL PRIVILEGES ON *.* TO admin@'192.168.0.14';
+GRANT ALL PRIVILEGES ON *.* TO admin@'%';
+
+
+docker ps -aq
+Stop all running containers
+docker stop $(docker ps -aq)
+Remove all containers
+docker rm $(docker ps -aq)
+Remove all images
+docker rmi $(docker images -q)
+
+docker-compose up
+#####
+agr+shift+x = > and shift w < on qwerty as azerty
+
+#####
+vim
+vsplit: split windows
+D to delete from cursor to the end of the line
+ctrl+K then 2S to have 2 as square 
+cw w change windows
+cw r or R rototate windows
+cw x exchange windows
+:resize 10+
+backup files :set directory=$HOME/.vim/swapfiles//
+cw q close windows
+set tabstop=4
+set shiftwidth=4
+o ->add new line in insert mode
+Go insert mode end of file
+yyp add new line in normal mode
+set number -> show numbers
+ctrl-f scrolls down a page and ctrl-b scrolls up a page
+f go to the next of next word
+I insert at the beginning of the line
+a insert after the cursor
+A insert the end of the line
+ea - insert (append) at the end of the word
+gg then dG to delete all
+ggVg to select all
+:%d             -> delete every line
+:%y             -> yank every line
+:%normal! >>    -> indent every line
+save session :mksession mysession
+open session: vim -S mysession
+shift+X to delete in backward like via back key
+:w !sudo tee %
+
+### highlight search
+set hlsearch
+ctrl v visual vertical
+v visual mode
+shift v visual line
+: bo term (set the terminal below)
+:set termwinsize=10x0 (terminal windwos size)
+set foldmethod=indent
+set foldmethod=syntax
+Shift + i  insert to start of block
